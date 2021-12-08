@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
 import store from "./store";
+import router from "./router";
 
 // 导入全局样式
 import "./style/index.scss";
@@ -23,9 +23,7 @@ router.beforeEach(async (to, from, next) => {
     } else {
       // 判断用户资料是否获取
       // 若不存在用户信息, 则需要获取用户信息
-      console.log(store.getters.hasUserInfo);
       if (!store.getters.hasUserInfo) {
-        console.log(11);
         // 去触发action的获取用户信息
         await store.dispatch("user/getUserInfo");
       }
