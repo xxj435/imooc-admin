@@ -5,4 +5,4 @@ export const TOKEN = 'token'
 export const TIME_STAMP = 'timeStamp'
 
 // 超过时长(毫秒) 两小时
-export const TOKEN_TIMEOUT_VALUE = 5000
+export const TOKEN_TIMEOUT_VALUE = 1000 * 6 * 120
