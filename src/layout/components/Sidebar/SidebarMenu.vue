@@ -7,6 +7,7 @@
     :unique-opened="true"
     router
     :default-active="activeMenu"
+    :collapse="!$store.getters.sidebarOpened"
   >
 
     <SidebarItem
@@ -31,7 +32,6 @@ const routes = computed(() => {
 const route = useRoute();
 const activeMenu = computed(() => {
   const { path } = route;
-  console.log(path);
   return path;
 });
 console.log(router);
