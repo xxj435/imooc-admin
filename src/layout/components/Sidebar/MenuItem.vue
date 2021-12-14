@@ -8,10 +8,11 @@
     v-else
     :icon="icon"
   ></svg-icon>
-  <span>{{ title }}</span>
+  <span>{{ generateTitle(title) }}</span>
 </template>
 
 <script setup>
+import { generateTitle } from "@/utils/i18n";
 import { defineProps } from "vue";
 defineProps({
   title: {

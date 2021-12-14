@@ -3,6 +3,7 @@
     <Hamburger class="hamburger-container"></Hamburger>
     <Breadcrumb class="breadcrumb-container"></Breadcrumb>
     <div class="right-menu">
+      <LangSelect class="right-menu-item hover-effect" />
       <!-- 头像 -->
       <el-dropdown
         class="avatar-container"
@@ -42,6 +43,7 @@
 
 <script setup>
 import {} from "vue";
+import LangSelect from "@/components/LangSelect";
 import { useStore } from "vuex";
 import Hamburger from "@/components/hamburger/index.vue";
 import Breadcrumb from "@/components/Breadcrumb/index.vue";
@@ -91,6 +93,17 @@ const logout = () => {
           --el-avatar-background-color: none;
           margin-right: 12px;
         }
+      }
+    }
+    ::v-deep .right-menu-item {
+      display: inline-block;
+      padding: 0 18px 0 0;
+      font-size: 24px;
+      color: #5a5e66;
+      vertical-align: text-bottom;
+
+      &.hover-effect {
+        cursor: pointer;
       }
     }
   }

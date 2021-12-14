@@ -11,9 +11,10 @@ import installElementPlus from "./plugins/element";
 // 导入svgicon
 import installIcons from "@/icons";
 
+import i18n from "@/i18n";
+
 // 白名单
 const whiteList = ["/login"];
-
 // 路由前置守卫
 router.beforeEach(async (to, from, next) => {
   // 存在token, 进入主页
@@ -41,4 +42,5 @@ router.beforeEach(async (to, from, next) => {
 const app = createApp(App);
 installIcons(app);
 installElementPlus(app);
+app.use(i18n);
 app.use(store).use(router).mount("#app");
