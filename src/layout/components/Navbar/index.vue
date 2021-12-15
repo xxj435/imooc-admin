@@ -3,6 +3,8 @@
     <Hamburger class="hamburger-container"></Hamburger>
     <Breadcrumb class="breadcrumb-container"></Breadcrumb>
     <div class="right-menu">
+      <Screenfull class="right-menu-item hover-effect" />
+      <ThemePicker class="right-menu-item hover-effect"></ThemePicker>
       <LangSelect class="right-menu-item hover-effect" />
       <!-- 头像 -->
       <el-dropdown
@@ -47,7 +49,8 @@ import LangSelect from "@/components/LangSelect";
 import { useStore } from "vuex";
 import Hamburger from "@/components/hamburger/index.vue";
 import Breadcrumb from "@/components/Breadcrumb/index.vue";
-
+import ThemePicker from "@/components/ThemeSelect/index";
+import Screenfull from "@/components/Screenfull";
 const store = useStore();
 
 // 退出登录

@@ -34,5 +34,4 @@ const activeMenu = computed(() => {
   const { path } = route;
   return path;
 });
-console.log(router);
 </script>

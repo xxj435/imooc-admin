@@ -39,7 +39,6 @@ export default {
 
     async getUserInfo({ commit }) {
       const res = await getUserInfo();
-      console.log(res);
       commit("SET_USERINFO", res);
     },
 

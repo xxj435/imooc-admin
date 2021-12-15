@@ -38,7 +38,6 @@ const route = useRoute();
 const breadcrumbData = ref([]);
 const getBreadcrumbData = () => {
   breadcrumbData.value = route.matched.filter((item) => item.meta?.title);
-  console.log(route.matched);
 };
 // 监听路由变化时触发
 watch(
