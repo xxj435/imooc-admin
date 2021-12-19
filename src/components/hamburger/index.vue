@@ -5,6 +5,7 @@
     @click="toggleClick"
   >
     <svg-icon
+      id="guide-hamburger"
       class="hamburger"
       :icon='icon'
     ></svg-icon>

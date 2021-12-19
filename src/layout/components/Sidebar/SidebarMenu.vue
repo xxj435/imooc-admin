@@ -18,13 +18,14 @@
   </el-menu>
 </template>
 <script setup>
-import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { filterRouters, generateMenus } from "@/utils/route";
+import { computed } from "vue";
 import SidebarItem from "./SidebarItem";
 const router = useRouter();
 
 const routes = computed(() => {
+  // 拿到所有的子路由
   const filterRoutes = filterRouters(router.getRoutes());
   return generateMenus(filterRoutes);
 });

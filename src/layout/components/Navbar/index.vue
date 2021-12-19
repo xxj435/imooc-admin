@@ -3,6 +3,8 @@
     <Hamburger class="hamburger-container"></Hamburger>
     <Breadcrumb class="breadcrumb-container"></Breadcrumb>
     <div class="right-menu">
+      <Guide class="right-menu-item hover-effect" />
+      <HeaderSearch class="right-menu-item hover-effect" />
       <Screenfull class="right-menu-item hover-effect" />
       <ThemePicker class="right-menu-item hover-effect"></ThemePicker>
       <LangSelect class="right-menu-item hover-effect" />
@@ -51,6 +53,8 @@ import Hamburger from "@/components/hamburger/index.vue";
 import Breadcrumb from "@/components/Breadcrumb/index.vue";
 import ThemePicker from "@/components/ThemeSelect/index";
 import Screenfull from "@/components/Screenfull";
+import HeaderSearch from "@/components/HeaderSearch";
+import Guide from "@/components/Guide";
 const store = useStore();
 
 // 退出登录

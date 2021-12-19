@@ -9,7 +9,10 @@
         content="国际化"
         :effect="effect"
       >
-        <svg-icon icon="language" />
+        <svg-icon
+          icon="language"
+          id="guide-lang"
+        />
       </el-tooltip>
     </div>
     <template #dropdown>

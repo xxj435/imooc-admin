@@ -9,7 +9,10 @@
   >
     <div>
       <el-tooltip :content="$t('navBar.themeChange')">
-        <svg-icon icon="change-theme" />
+        <svg-icon
+          icon="change-theme"
+          id="guide-theme"
+        />
       </el-tooltip>
     </div>
     <template #dropdown>
