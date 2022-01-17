@@ -53,7 +53,7 @@ import Hamburger from "@/components/hamburger/index.vue";
 import Breadcrumb from "@/components/Breadcrumb/index.vue";
 import ThemePicker from "@/components/ThemeSelect/index";
 import Screenfull from "@/components/Screenfull";
-import HeaderSearch from "@/components/HeaderSearch";
+// import HeaderSearch from "@/components/HeaderSearch";
 import Guide from "@/components/Guide";
 const store = useStore();
 
