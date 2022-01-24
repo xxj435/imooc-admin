@@ -23,7 +23,7 @@
               :label="$t('profile.feature')"
               name="feature"
             >
-              <feature />
+              <Feature :features="featureData"></Feature>
             </el-tab-pane>
             <el-tab-pane
               :label="$t('profile.chapter')"
@@ -46,17 +46,18 @@
 <script setup>
 import ProjectCard from "./components/ProjectCard.vue";
 import Chapter from "./components/Chapter.vue";
-// import Feature from "./components/Feature.vue";
+import Feature from "./components/Feature.vue";
 import Author from "./components/Author.vue";
 import { ref } from "vue";
 import { feature } from "@/api/user";
+import { watchSwitchLang } from "@/utils/i18n";
 const activeName = ref("feature");
 const featureData = ref([]);
 const getFeatureData = async () => {
   featureData.value = await feature();
-  console.log(featureData);
 };
 getFeatureData();
+watchSwitchLang(getFeatureData);
 </script>
 <style lang='scss' scoped>
 .my-container {

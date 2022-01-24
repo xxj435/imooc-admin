@@ -44,11 +44,39 @@
         </div>
       </div>
     </div>
+    <div class="project-bio-section">
+      <div class="project-bio-section-header">
+        <svg-icon icon="reward" /><span>{{
+            $t('profile.projectFunction')
+          }}</span>
+      </div>
+      <div class="project-bio-section-body">
+        <div
+          class="progress-item"
+          v-for="item in features"
+          :key="item.id"
+        >
+          <div>{{ item.title }}</div>
+          <el-progress
+            :percentage="item.percentage"
+            status="success"
+          />
+        </div>
+      </div>
+    </div>
+
   </el-card>
 </template>
 
 <script setup>
 import PanThumb from "@/components/PanThumb/index.vue";
+import { defineProps } from "vue";
+defineProps({
+  features: {
+    type: Array,
+    required: true,
+  },
+});
 </script>
 
 <style lang="scss" scoped>

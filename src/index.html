@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>line 划线</title>
+<script>
+function draw(){
+var g = document.getElementById("show").getContext("2d");
+/* lineCap设置线条开始与结尾的线帽样式，有3个值
+ * 1 butt: 这是默认值，不加任何样式
+ * 2 round: 圆形
+ * 3 square: 正方形
+*/
+  g.lineCap='round';
+  g.strokeStyle = 'red';
+  g.lineWidth='24';
+  g.lineCap='round';
+  g.moveTo( 20, 100 );
+  g.lineTo( 450, 100 );
+  g.stroke();
+  g.beginPath(); //必须的。 否则，
+  g.strokeStyle = 'blue';
+  g.lineWidth='14';
+  g.lineCap='round';
+  g.moveTo( 22, 101 );
+  g.lineTo( 448, 101 );
+  g.stroke();
+}
+</script>
+</head>
+<body onLoad="draw()">
+<canvas id="show" width="500" height="500" ></canvas>
+</body>
+</html>

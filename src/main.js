@@ -8,6 +8,8 @@ import "./style/index.scss";
 
 import installElementPlus from "./plugins/element";
 
+// 导入全局属性
+import installFilter from '@/filter'
 // 导入svgicon
 import installIcons from "@/icons";
 
@@ -40,6 +42,7 @@ router.beforeEach(async (to, from, next) => {
   }
 });
 const app = createApp(App);
+installFilter(app);
 installIcons(app);
 installElementPlus(app);
 app.use(i18n);
